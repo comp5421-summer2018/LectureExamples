@@ -1,9 +1,8 @@
 #include "Stack.h"
 #include <cassert>
 
-// TODO: Can use C++11 {} initialization syntax
 Stack::Stack()
-        : head{nullptr}, size{0}
+    : head{nullptr}, size{0}
 {
 }
 
@@ -12,17 +11,10 @@ Stack::~Stack()
     while(!isEmpty()){
         pop();
     }
-
-    // Alternative:
-//    while(head != nullptr){
-//        Node *temp = head;
-//        head = head->next;
-//        delete temp;
-//    }
 }
 
 Stack::Stack(const Stack & other)
-        : head(nullptr), size(other.size)
+        : head(nullptr), size(0)
 {
     // Loop from head to add. Push each element of other
     for(Node * itr = other.head; itr != nullptr; itr = itr->next){
@@ -36,8 +28,6 @@ void Stack::operator=(const Stack & other)
     while(!isEmpty()){
         pop();
     }
-
-    size = other.size;
 
     // Loop from head to add. Push each element of other
     for(Node * itr = other.head; itr != nullptr; itr = itr->next){
@@ -55,13 +45,8 @@ int Stack::top()
 void Stack::push(int value)
 {
     Node * newNode = new Node(value, head);
-
+    head = newNode;
     size++;
-    if(isEmpty()){
-        head = newNode;
-    }else{
-        head->next = newNode;
-    }
 }
 
 void Stack::pop()

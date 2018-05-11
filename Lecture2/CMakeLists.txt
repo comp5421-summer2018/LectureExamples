@@ -3,4 +3,4 @@ project(Lecture2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Lecture2 main.cpp)
+add_executable(Lecture2 main.cpp Array.h Array.cpp Stack.h Stack.cpp)

@@ -13,7 +13,7 @@ private:
 
         // Default parameters need only be specified in the header file
         // If you have implementation in cpp file you can exclude the default parameter in signature
-        Node(int data, Node *next = nullptr): data(data), next(next);
+        Node(int data, Node *next = nullptr): data(data), next(next){}
     };
 
     Node *head;
