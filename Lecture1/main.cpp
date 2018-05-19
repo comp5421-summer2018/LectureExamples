@@ -210,7 +210,6 @@ int main()
         cout << "Enter '123x4.43ss': " << endl;
 
         // cin reads first valid data type until first whitespace or end of allowable datatype format
-        // cin reads first valid data type until first whitespace or end of allowable datatype format
         cin >> x >> ch1 >> d >> ch2;
 
         // 123, x, 4.43, s
