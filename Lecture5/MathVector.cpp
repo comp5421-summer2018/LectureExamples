@@ -2,9 +2,9 @@
 // Created by Stefan Wapnick on 2018-05-30.
 //
 
-#include <tclDecls.h>
 #include <cassert>
 #include "MathVector.h"
+#include <initializer_list>
 
 MathVector::MathVector(int n) : dim(n), v(new int[n])
 {
@@ -13,8 +13,12 @@ MathVector::MathVector(int n) : dim(n), v(new int[n])
     }
 }
 
-MathVector::MathVector(const MathVector &other)
+MathVector::MathVector(const MathVector &other) : dim(other.dim), v(new int[other.dim])
 {
+	for (int i = 0; i < dim; i++)
+	{
+		v[i] = other.v[i];
+	}
 }
 
 MathVector::~MathVector()
@@ -24,7 +28,19 @@ MathVector::~MathVector()
 
 const MathVector &MathVector::operator=(const MathVector &other)
 {
-    return <#initializer#>;
+	if (this == &other)
+	{
+		return *this;
+	}
+
+	delete[] v;
+	dim = other.dim;
+	v = new int[dim];
+	for(int i = 0; i < dim; i++)
+	{
+		v[i] = other.v[i];
+	}
+	return *this; 
 }
 
 
@@ -69,12 +85,26 @@ MathVector MathVector::operator-(const MathVector &rhs)
 
 int &MathVector::operator[](int index)
 {
-    assert(index >= 0 && index < n);
+    assert(index >= 0 && index < dim);
     return v[index];
 }
 
 const int &MathVector::operator[](int index) const
 {
-    assert(index >= 0 && index < n);
+    assert(index >= 0 && index < dim);
     return v[index];
+}
+
+
+MathVector operator*(const MathVector& lhs, int rhs) {
+
+	MathVector clone = lhs;
+	for (int i = 0; i < clone.dim; i++) {
+		clone.v[i] *= rhs;
+	}
+	return clone;
+}
+
+MathVector operator*(int lhs, const MathVector& rhs) {
+	return rhs * lhs;
 }

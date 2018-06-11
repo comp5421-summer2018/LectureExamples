@@ -9,7 +9,7 @@
 namespace ylib{
     void f(int);
     int g();
-    const int max = 200;
+    const int ymax = 200;
 }
 
 #endif //LECTURE5_YLIB_H

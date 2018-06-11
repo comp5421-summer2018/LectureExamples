@@ -3,7 +3,8 @@
 //
 
 #include "xlib.h"
-
+#include <iostream>
+using namespace std;
 
 void xlib::f(int x)
 {
