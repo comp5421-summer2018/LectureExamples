@@ -24,18 +24,10 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="694">
               <caret line="216" column="5" lean-forward="true" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#1649#1675#0" expanded="true" />
-                <element signature="e#1865#1874#0" expanded="true" />
-                <element signature="e#2105#2107#0" expanded="true" />
-                <element signature="e#2968#2980#0" expanded="true" />
-                <element signature="e#3990#4016#0" expanded="true" />
-                <element signature="e#4041#4050#0" expanded="true" />
-                <element signature="e#4109#4121#0" expanded="true" />
-                <element signature="e#4584#4611#0" expanded="true" />
                 <element signature="e#5536#5563#0" expanded="true" />
                 <element signature="e#5639#5666#0" expanded="true" />
                 <element signature="e#5771#5798#0" expanded="true" />
@@ -59,9 +51,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="180" />
+    <option name="y" value="200" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -70,7 +62,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,6 +73,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -120,28 +112,28 @@
       <option name="presentableId" value="Default" />
       <updated>1531348555546</updated>
       <workItem from="1531348557239" duration="10000" />
-      <workItem from="1531348579202" duration="8052000" />
+      <workItem from="1531348579202" duration="8082000" />
+      <workItem from="1531439543027" duration="275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8062000" />
+    <option name="totallyTimeSpent" value="8367000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="180" y="200" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32948717" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32948717" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32948717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32948717" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -149,6 +141,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32948717" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,18 +153,23 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3240">
+          <caret line="216" column="5" lean-forward="true" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#5536#5563#0" expanded="true" />
+            <element signature="e#5639#5666#0" expanded="true" />
+            <element signature="e#5771#5798#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1649#1675#0" expanded="true" />
-            <element signature="e#1865#1874#0" expanded="true" />
-            <element signature="e#2105#2107#0" expanded="true" />
-            <element signature="e#2968#2980#0" expanded="true" />
-            <element signature="e#3990#4016#0" expanded="true" />
-            <element signature="e#4041#4050#0" expanded="true" />
-            <element signature="e#4109#4121#0" expanded="true" />
-            <element signature="e#4584#4611#0" expanded="true" />
             <element signature="e#5536#5563#0" expanded="true" />
             <element signature="e#5639#5666#0" expanded="true" />
             <element signature="e#5771#5798#0" expanded="true" />
@@ -188,18 +186,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="694">
           <caret line="216" column="5" lean-forward="true" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1649#1675#0" expanded="true" />
-            <element signature="e#1865#1874#0" expanded="true" />
-            <element signature="e#2105#2107#0" expanded="true" />
-            <element signature="e#2968#2980#0" expanded="true" />
-            <element signature="e#3990#4016#0" expanded="true" />
-            <element signature="e#4041#4050#0" expanded="true" />
-            <element signature="e#4109#4121#0" expanded="true" />
-            <element signature="e#4584#4611#0" expanded="true" />
             <element signature="e#5536#5563#0" expanded="true" />
             <element signature="e#5639#5666#0" expanded="true" />
             <element signature="e#5771#5798#0" expanded="true" />
