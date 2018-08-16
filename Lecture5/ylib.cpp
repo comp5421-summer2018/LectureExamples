@@ -3,20 +3,21 @@
 //
 
 #include "ylib.h"
-
+#include <iostream>
+using namespace std; 
 
 namespace ylib{
 
+	// Can extend and add more elements here
+	int nmin = 10;
+
     void f(int x)
     {
-        cout << max + x << endl;
+        cout << ymax << x + x << endl;
     }
 
     int g()
     {
         return 1;
     }
-
-    // Can extend and add more elements here
-    int min = 10;
 }

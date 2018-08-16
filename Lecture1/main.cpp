@@ -122,6 +122,9 @@ int main()
     int &v = u;
     int &z = u;
 
+	// Not allowed since not a memory location to reference
+	// int &w = 2; 
+
     u = 2*z;
     cout << u << v << z << endl;    // u = v = z = 20
 

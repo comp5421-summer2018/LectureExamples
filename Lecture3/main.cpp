@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -45,7 +46,7 @@ ostream & operator<<(ostream & out, const Bar & b){
 
 class Foo{
 
-    // If we had default constructor, would not work
+    // If we had default constructor, would not work because of const int and reference must be initialized by us
     int x;
     const int y;            // Must be initialized here or in initialization list
     int &z;                 // Can only be initialized in initialization list
@@ -53,9 +54,7 @@ class Foo{
 
 public:
 
-
     // Put &zz if you want it to be passed by reference, else reference will be a reference to a local variable
-    // TODO: Investigate &zz
     Foo(int xx, int yy, int &zz, const string &name)
         : x(xx), y(yy), z(zz), name(name) {      // copy constructor called for these in initialization, not assignment
 
@@ -208,9 +207,11 @@ int main()
     int &rx = x;
 
     const int y = 20;
-    //int &ry = y;        // Error, would mean that rb could modify b by a backdoor
-    const int &ry = y;
+    //int &yRef = y;        // Error, would mean that rb could modify b by a backdoor
+	// int* yPtr = &y;
 
+    const int &yRef = y;
+	const int* yPtr = &y; 
 
     // Literals CANNOT be assigned to references
     // But const literals CAN be assigned to reference
@@ -248,8 +249,15 @@ int main()
         int (*pa)[10] = &a;     // pa is a pointer to an array of 10 integers
         int (*f)(int);          // f is a pointer to a function taking an int and returning an int
 
-        f = triple;             // Use & here?
+        f = triple;             // Can also use & here
+		// f = &triple;
         cout << f(3) << endl;
+
+		int*d = new int[10];		// Returns pointer to head of array
+		int*e = new int;			// Returns pointer to int
+		int** x = new int*[10];		// Returns pointer to head of array of type int*
+		int** y = new int*;			// Returns pointer to element of int*
+		*y = new int[10];
 
         char * cStrings[10];    // cStrings is an array of 10 c-strings
 
@@ -308,7 +316,6 @@ int main()
         f2 = "Hello";
     }
 
-
-
+	// system("pause"); 
     return 0;
 }

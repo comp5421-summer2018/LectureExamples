@@ -29,7 +29,7 @@ public:
 
     void push(int value);
     void pop();
-    int top();
+	int top() const; 
     bool isEmpty() const;
 };
 

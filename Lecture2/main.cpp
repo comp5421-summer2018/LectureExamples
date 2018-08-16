@@ -110,5 +110,7 @@ int main()
     cout << "s1 is empty: " << s1.isEmpty() << endl;
     cout << "s2 is empty: " << s2.isEmpty() << endl;
 
+	// system("pause"); 
+
     return 0;
 }

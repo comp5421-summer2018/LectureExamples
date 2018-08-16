@@ -35,7 +35,7 @@ void Stack::operator=(const Stack & other)
     }
 }
 
-int Stack::top()
+int Stack::top() const
 {
     assert(!isEmpty());
     return head->data;

@@ -8,7 +8,7 @@
 
 namespace xlib{
     void f(int);
-    int max = 100;
+	const int nmax = 100;
 }
 
 
