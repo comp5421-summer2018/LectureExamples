@@ -13,7 +13,7 @@ void passByReference(int &x){
 }
 
 // This is pass by value (a copy of the value stored inside the pointer argument (an address) is made)
-// However passing a pointer lets us modify the original copy
+// However passing a pointer lets us modify the original copy in a pass by reference fashion
 void passByPointerValue(int* x){
     (*x)++;
 }
@@ -125,6 +125,9 @@ int main()
 	// Not allowed since not a memory location to reference
 	// int &w = 2; 
 
+	// Allowed since constant reference
+	const int& aRef = 2;
+
     u = 2*z;
     cout << u << v << z << endl;    // u = v = z = 20
 
@@ -143,8 +146,8 @@ int main()
      * Arrays and pointers
      * ------------------------------------*/
 
-    // Arrays are actually implemented as pointers.
-    // Array identifier is pointer to first element in array
+    // Arrays degrade to pointers though they are not entirely equivalent.
+    // Array name degrades to pointer to first element in array
 
     int a[] = {1,2,3,4,5,6};
 

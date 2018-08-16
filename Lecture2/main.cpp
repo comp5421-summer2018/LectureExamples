@@ -13,7 +13,14 @@ public:
     Point(int x, int y) : x(x), y(y)
     {}
 
-    Point operator+(Point& b){
+	Point& operator+=(const Point& other)
+    {
+		x += other.x;
+		y += other.y;
+		return *this; 
+    }
+
+    Point operator+(const Point& b) const{
         Point p = Point(x+b.x, y+b.y);
         return p;
     }
@@ -50,7 +57,7 @@ int main()
 
     // Calls default (no parameters) constructor
     Array a11;
-    Array a12();            // alternative
+    Array a12{};            // alternative
     Array a13 = Array();    // alternative
 
     // Calls parameterized constructor

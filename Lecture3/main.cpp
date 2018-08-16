@@ -312,7 +312,7 @@ int main()
 
     {
         FooBar f1, f2;
-        f1 = 10;        // This might seem like copy assignment, but FooBar(10) is implicit
+        f1 = 10;        // This is the same as f1 = Foobar(10), a temporary FooBar is made from 10, assignment operator called, then temp FooBar(10) deleted
         f2 = "Hello";
     }
 

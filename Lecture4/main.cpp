@@ -41,10 +41,10 @@ void readFile(){
     int n = 0;
 
     while(getline(fin, line)) {
-        istringstream sin(line);        // stream reader for a string (1 line in this example)
+		n++;
+    	istringstream sin(line);        // stream reader for a string (1 line in this example)
         string word;
         while(sin >> word){
-            n++;
             cout << word << n << endl;
         }
     }
@@ -61,14 +61,22 @@ int main()
     // ABC<return>
     // Ctrl+Z
     //
-    // Count value would be 5
-    // Only realizes that it is eof after reading ctrl+z
+    // Count value 4
     char ch;
-    int count;
+	int count = 0; 
     while(cin.get(ch)){
         ++count;
     }
     cout << count << endl;
+
+	cin.clear();
+	string str2;
+	count = 0; 
+	while(getline(cin, str2))
+	{
+		count++; 
+	}
+	cout << count << " lines entered" << endl;
 
     // Operator >> skips over whitespace and newline characters
     // Keeps going until it finds the eof
@@ -80,6 +88,7 @@ int main()
     // 82<space>-10<return>
     // Ctrl+Z<return>
     // 99
+	cin.clear();
     int x;
     while(cin >> x){
         cout << x << endl;
@@ -101,15 +110,18 @@ int main()
     // Sample input
     //
     // A<space><space>B<space>C<return>
-    // <space><space<space>D<return>
+    // <space><space<space>DE<return>
     // Ctrl+Z
     {
 
         char ch;
+		int i = 0; 
         while(cin >> ch){
             cout << ch;
+			i++;
         }
-        // Output:  ABCD
+        // Output:  ABCDE
+		// i = 5
 
     }
 
@@ -125,27 +137,27 @@ int main()
     // boolalpha    - Read 'true' and 'false' as string literals instead of boolean values
     // noboolalpha  - Return off boolalpha
 
+	// Sample input:
+	// 12 12 a0
+	// Read values:     10, 12, 160
+	cin.clear(); 
     {
         int x,y,z;
         cin >> oct >> x >> dec >> y >> hex >> z;
     }
 
-
-    // Sample input:
-    // 12 12 a0
-    // Read values:     10, 12, 160
-
     int n = 70;
-    cout << dec << n << endl;
-    cout << hex << n << endl;
-    cout << oct << n << endl;
+    cout << dec << n << endl;	// 70
+    cout << hex << n << endl;	// 46
+    cout << oct << n << endl;	// 106
 
-    // Skip to non first whitespace character for 1 read
-    char a;
+
+	char a;
+
+	// All subsequent reads do not skip whitespace
+	cin >> noskipws;
+	// Skip to non first whitespace character for 1 read
     cin >> ws >> a;
-
-    // All subsequent reads do not skip whitespace
-    cin >> noskipws;
 
     // Reset back to default behavior of skipping whitespace
     cin >> skipws;
@@ -168,7 +180,7 @@ int main()
 
     // Reads: this<space>is<space>a
     cin.getline(str, 10, '\n');
-
+	
     // Difference with getline -> removes the newline character for next read
 
 
@@ -221,7 +233,7 @@ int main()
     // ABC<space><space><space><space><space><space>XYZ
 
     cout << oct << 10;      // 012      - 0 is leading character of octel numbers
-    cout << hex << 165;     // 0xA5     - 0x is leading character for hex numbers
+    cout << hex << 165;     // A5     - 0x is leading character for hex numbers
 
     {
         cout << fixed << setprecision(2);       // TODO: Try without fixed
@@ -247,8 +259,9 @@ int main()
             cout << *p << " ";
         }
 
-        // Initialize a vector using an iterator
+        // Initialize a vector from other collection
         vector<int> v(a, a+10);
+		vector<int> v(begin(a), end(a)); 
 
         // end is one element after the last
         for(vector<int>::iterator it = v.begin(); it != v.end(); it++){
@@ -265,8 +278,8 @@ int main()
 
     {
         // C++11 array iterators
-        array<int, 3> a = {1,2,3};
-        for(array<int,10>::iterator it = a.begin(); it != a.end(); it++){
+        array<int, 3> arr = {1,2,3};
+        for(array<int,3>::iterator it = arr.begin(); it != arr.end(); it++){
             cout << *it << endl;
         }
 

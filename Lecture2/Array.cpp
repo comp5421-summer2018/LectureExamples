@@ -75,7 +75,7 @@ ostream &operator<<(ostream &os, const Array &array)
     return os;
 }
 
-int Array::getLength()
+int Array::getLength() const
 {
     return length;
 }

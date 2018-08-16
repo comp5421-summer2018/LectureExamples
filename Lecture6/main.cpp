@@ -15,7 +15,7 @@ using namespace std;
 //      {
 //          vec c(a);           // copy constructor, destructor
 //      }
-//                              // b, c destructor      (order is based on stack)
+//                              // b, a destructor      (order is based on stack)
 // 3) Prefix vs postfix syntax (postfix takes a dummy argument)
 //      Why return a reference for prefix, copy for postfix (want to freeze copy of state)
 //      x = ++y     =       y = y + 1; x = y;
@@ -26,9 +26,8 @@ using namespace std;
 // NOTE: can still update an index position even with const operator? -> check notes
 // ONLY pointers and references returned from functions can act as L-Values in subsequent assignment
 // a[0] = 2;        [] operator must return a reference to an int
-// NOTE: In notes, all simple arithmetic operators can be implemented as member or friend functions. Can be friend because
-// returns object of same type
-// To have member implementation LHS must be of same type as calling class
+// NOTE: In notes, all simple arithmetic operators can be implemented as member or friend functions. Can be member because
+// lhs object of same type
 // unary/binary operator as member = no arguments, 1 argument (since this passed implicitly)
 // unary/binary operator as friend = 1 argument, 2 arguments
 // Can always have at most 2 operands, except for ? : (ternary operator)
@@ -157,7 +156,7 @@ int main()
 
     // What's wrong with this:
     Bar b1(10);
-    // Bar b2 = 10;        // This is what's wrong because explicit
+	// Bar b2 = 10;        // Can't do this because explicit
 
 
     // PROGRAMMING QUESTIONS

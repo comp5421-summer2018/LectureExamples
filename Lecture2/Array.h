@@ -21,7 +21,7 @@ public:
     Array& operator=(const Array &);
     virtual ~Array();
 
-    int getLength();
+    int getLength() const;
 
     int get(int index) const;
 
